@@ -10,6 +10,18 @@ hr.mainLine {
   width: 100px;
 }
 
+hr.smallLineLeft {
+  border-top: 1px solid white;
+  width: 250px;
+  margin-left:0;
+}
+
+hr.smallLineRight {
+  border-top: 1px solid white;
+  width: 250px;
+  margin-right:0;
+}
+
 h1 {
   font-family: verdana;
   font-size: 72px;
@@ -27,6 +39,14 @@ h2 {
 }
 
 p {
+  font-family: verdana;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  text-style: bold;
+}
+
+p.p1 {
   font-family: verdana;
   font-size: 32px;
   color: white;
@@ -55,10 +75,37 @@ li a {
   color: white;
   text-align: center;
   margin-left: 100px;
+  margin-right: 100px;
   margin-bottom: 50px;
   text-decoration: none;
   text-size: 200%;
+  text-style: bold;
 }
+
+li bLeft {
+  display: block;
+  color: white;
+  text-align: left;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  text-size: 200%;
+  text-style: bold;
+}
+
+li bRight {
+  display: block;
+  color: white;
+  text-align: right;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  text-size: 200%;
+  text-style: bold;
+}
+
 
 li a:hover {
     color:white; 
