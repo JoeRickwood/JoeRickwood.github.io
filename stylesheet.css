@@ -5,6 +5,11 @@
   flex-direction: column;
 }
 
+hr.mainLine {
+  border-top: 1px solid white;
+  width: 100px;
+}
+
 h1 {
   font-family: verdana;
   font-size: 72px;
@@ -49,7 +54,8 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  margin: 100px;
+  margin-left: 100px;
+  margin-bottom: 50px;
   text-decoration: none;
   text-size: 200%;
 }
