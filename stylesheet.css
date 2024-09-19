@@ -7,7 +7,55 @@
 
 h1 {
   font-family: verdana;
-  font-size: 48px;
-  color: black;
+  font-size: 72px;
+  color: white;
   text-align: center;
+  text-style: bold;
+}
+
+h2 {
+  font-family: verdana;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  text-style: bold;
+}
+
+p {
+  font-family: verdana;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  text-style: bold;
+}
+
+body {
+	background-color: #111111;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+    float: left;
+    text-size: 32px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  margin: 100px;
+  text-decoration: none;
+  text-size: 200%;
+}
+
+li a:hover {
+    color:white; 
+    text-decoration:none; 
+    cursor:pointer;  
 }
