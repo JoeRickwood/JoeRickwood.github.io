@@ -1,3 +1,8 @@
+:root {
+  --link: #95c4ed;
+  --text: #fafbfc;
+}
+
 .flex-container {
   display: flex;
   justify-content: center;
@@ -16,14 +21,17 @@
   margin: auto;
   display: flex;
   list-style-type: none;
-  justify-content: space-evenly;
-  width: 50%;
+  justify-content: space-around;
+  width: 30%;
+  flex-direction: row;
 }
 
 hr.mainLine {
   border-top: 1px solid white;
   width: 100px;
 }
+
+
 
 hr.workSeperator {
   border-top: 1px solid white;
@@ -35,7 +43,7 @@ hr.workSeperator {
 h1 {
   font-family: verdana;
   font-size: 72px;
-  color: white;
+  color: var(--text);
   text-align: center;
   text-style: bold;
 }
@@ -43,7 +51,7 @@ h1 {
 h2 {
   font-family: verdana;
   font-size: 32px;
-  color: white;
+  color: var(--text);
   text-align: center;
   text-style: bold;
 }
@@ -51,7 +59,7 @@ h2 {
 h3 {
   font-family: verdana;
   font-size: 16px;
-  color: white;
+  color: var(--text);
   text-align: center;
   text-style: bold;
 }
@@ -59,7 +67,7 @@ h3 {
 p {
   font-family: verdana;
   font-size: 32px;
-  color: white;
+  color: var(--text);
   text-align: center;
   text-style: bold;
 }
@@ -70,35 +78,45 @@ body {
 
 li {
     float: left;
-    text-size: 32px;
     align-center: center;
+    text-size: 32px;
+    font-family: verdana;
+    word-wrap: normal;
 }
 
 li a {
   display: block;
-  color: white;
-  text-align: center;
+  color: inherit;
+  text-align: inherit;
   width: 200px;
   margin-bottom: 50px;
   text-decoration: none;
-  text-size: 16px;
+  font-size: 32px;
   text-style: bold;
-  word-wrap: break-word;
+  word-wrap: inherit;
 }
 
 li b {
   display: block;
-  color: white;
-  text-align: inherit;
+  color: var(--link);
+  text-align: left;
   width: 250px;
-  height: 250px;
-  text-size: inherit;
+  height: 50px;
+  font-size: 24px;
   text-style: bold;
-  word-wrap: break-word;
+  text-decoration: underline;
+  word-wrap: inherit;
+  white-space: nowrap;
 }
 
-li a:hover {
-    color:white; 
-    text-decoration:none; 
-    cursor:pointer;  
+li c {
+  display: block;
+  color: var(--text);
+  text-align: inherit;
+  width: 250px;
+  height: 200px;
+  font-size: 14px;
+  text-style: bold;
+  word-wrap: break-word;
+  white-space: pre-line;
 }
