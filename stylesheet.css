@@ -21,17 +21,27 @@
   margin: auto;
   display: flex;
   list-style-type: none;
-  justify-content: space-around;
+  justify-content: center;
   width: 30%;
   flex-direction: row;
+  gap: 20px;
+}
+
+footer 
+{
+  width: 100vw;
+  height: 90px;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  bottom: 0;
 }
 
 hr.mainLine {
   border-top: 1px solid white;
   width: 100px;
 }
-
-
 
 hr.workSeperator {
   border-top: 1px solid white;
@@ -45,7 +55,6 @@ h1 {
   font-size: 72px;
   color: var(--text);
   text-align: center;
-  text-style: bold;
 }
 
 h2 {
