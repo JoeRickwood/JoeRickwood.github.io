@@ -1,50 +1,65 @@
 :root {
   --link: #95c4ed;
-  --text: #fafbfc;
+  --text1: #fafbfc;
+  --text2: rgb(255, 68, 0);
+  --background: #111111;
 }
 
 .flex-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-
+  align-items: center;
+  width: 100%;
 }
+
 .container {
   display: flex;
   list-style: none;
   align-items: center;
   flex-direction: column;
-}  
+} 
+
+.container-clamp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.video-container {
+  display: block;
+  width: 90%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  align-self: center;
+}
 
 .list {
-  margin: auto;
   display: flex;
-  list-style-type: none;
   justify-content: center;
-  width: 30%;
-  flex-direction: row;
   gap: 20px;
+  width: 100%; 
+  margin-bottom: 50px;
 }
 
 footer 
 {
   width: 100vw;
-  height: 90px;
+  height: 25px;
   color: rgb(0, 0, 0);
   text-align: left;
-  background-color: rgb(0, 0, 0);
-  position: fixed;
+  background-color: #111111;
   bottom: 0;
 }
 
 hr.mainLine {
-  border-top: 1px solid white;
+  border-top: 1px solid rgb(255, 68, 0);
   width: 100px;
 }
 
 hr.workSeperator {
-  border-top: 1px solid white;
+  border-top: 1px solid rgb(255, 68, 0);
   margin-top:50px;
   margin-bottom:50px;
   width: 500px;
@@ -53,32 +68,29 @@ hr.workSeperator {
 h1 {
   font-family: verdana;
   font-size: 72px;
-  color: var(--text);
+  color: var(--text1);
   text-align: center;
 }
 
 h2 {
   font-family: verdana;
   font-size: 32px;
-  color: var(--text);
+  color: var(--text2);
   text-align: center;
-  text-style: bold;
 }
 
 h3 {
   font-family: verdana;
   font-size: 16px;
-  color: var(--text);
+  color: var(--text2);
   text-align: center;
-  text-style: bold;
 }
 
 p {
   font-family: verdana;
   font-size: 32px;
-  color: var(--text);
+  color: var(--text1);
   text-align: center;
-  text-style: bold;
 }
 
 body {
@@ -87,8 +99,6 @@ body {
 
 li {
     float: left;
-    align-center: center;
-    text-size: 32px;
     font-family: verdana;
     word-wrap: normal;
 }
@@ -101,7 +111,6 @@ li a {
   margin-bottom: 50px;
   text-decoration: none;
   font-size: 32px;
-  text-style: bold;
   word-wrap: inherit;
 }
 
@@ -112,7 +121,6 @@ li b {
   width: 250px;
   height: 50px;
   font-size: 24px;
-  text-style: bold;
   text-decoration: underline;
   word-wrap: inherit;
   white-space: nowrap;
@@ -125,7 +133,162 @@ li c {
   width: 250px;
   height: 200px;
   font-size: 14px;
-  text-style: bold;
   word-wrap: break-word;
   white-space: pre-line;
+}
+
+/* From Uiverse.io by TISEPSE */ 
+.btn2 {
+  position: relative;
+  flex: 1; 
+  padding: 20px 0; 
+  border: 2px solid var(--text2);
+  text-transform: uppercase;
+  color : var(--text2);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  transition: 0.3s;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn2::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 6px);
+  height: calc(100% + 2px);
+  background-color: #212121;
+  transition: 0.3s ease-out;
+  transform: scaleY(1);
+}
+
+.btn2::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 50px);
+  background-color: #212121;
+  transition: 0.3s ease-out;
+  transform: scaleY(1);
+}
+
+.btn2:hover::before {
+  transform: translateY(-25px);
+  height: 0;
+}
+
+.btn2:hover::after {
+  transform: scaleX(0);
+  transition-delay: 0.15s;
+}
+
+.btn2:hover {
+  border: 2px solid var(--text2);
+}
+
+.btn2 .spn2 {
+  position: relative;
+  z-index: 3;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  font-family: verdana;
+  color : var(--text1);
+}
+
+
+/* From Uiverse.io by Zameerahmad01 */ 
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  align-self: flex-start;
+  width: 100%;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.example-2 .icon-content {
+  margin: 10px;
+  position: relative;
+  padding: 0;
+}
+
+
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 30%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.example-2 .icon-content a:hover {
+  color: white;
+}
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+  background-color: #0274b3;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"] ~ .tooltip {
+  background-color: #24262a;
+}
+
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #ff0000;
+}
+
+.card {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  margin: 0;
+  background-image: linear-gradient(144deg, var(--text2), #ffee00 50%,var(--text2));
+}
+
+.card__content {
+  background: var(--background);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
 }
