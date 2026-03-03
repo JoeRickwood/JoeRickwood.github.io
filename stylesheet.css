@@ -15,6 +15,14 @@
 .flex-container-right {
   display: flex;
   flex-direction: row;
+  height: 80px;
+}
+
+.flex_container_portfolio {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  width: 95%;
 }
 
 .container {
@@ -93,7 +101,7 @@ h3 {
 
 p {
   font-family: verdana;
-  font-size: 32px;
+  font-size: 24px;
   color: var(--text1);
   text-align: center;
 }
@@ -107,6 +115,7 @@ li {
     word-wrap: normal;
     color: var(--text1);
     margin-right: 50px;
+    margin-top: 10px;
 }
 
 li a {
@@ -285,9 +294,25 @@ ul {
 .card {
   width: 100%;
   height: auto;
-  padding: 5px;
+  padding: 2px;
   margin: 0;
   background-image: linear-gradient(144deg, var(--text2), #ffee00 50%,var(--text2));
+}
+
+.bar 
+{
+  width: 90%;
+  height: 2px;
+  margin-left: 5%;
+  background-color: var(--text2);
+}
+
+.half_box 
+{
+  display: flex;
+  width: 50%;
+  height: 50px;
+  word-wrap: break-word;
 }
 
 .card_work {
@@ -302,8 +327,8 @@ ul {
   display: flex;
   background: var(--background);
   height: 300px;
-  justify-content: center;
   align-content: center;
+  flex-direction: column;
 }
 
 .card_image_end {
