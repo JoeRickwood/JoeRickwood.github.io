@@ -118,7 +118,7 @@ li a {
   color: inherit;
   text-align: inherit;
   width: 200px;
-  margin-bottom: 50px;
+  margin: 20px 10px 20px 10px;
   text-decoration: none;
   font-size: 32px;
   word-wrap: inherit;
@@ -301,7 +301,6 @@ ul {
 {
   width: 90%;
   height: 2px;
-  margin-left: 5%;
   background-color: var(--text2);
 }
 
@@ -315,7 +314,7 @@ ul {
 
 .half_box {
   width: 50%;
-  padding: 20px;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -344,6 +343,7 @@ ul {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: var(--background);
   padding: 20px 0;
   gap: 20px; /* clean spacing instead of relying on margins */
