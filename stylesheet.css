@@ -464,7 +464,7 @@
     text-decoration: none;
 
     color: inherit;
-    fill: #f4c95d;
+    background-image: linear-gradient(to bottom, #8f498c, #7e39a0);
 
     padding: 25px;
 
