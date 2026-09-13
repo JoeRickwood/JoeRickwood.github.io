@@ -36,6 +36,11 @@ jobs:
         run: |
           python scripts/generate_blog.py
 
+      - name: Show generated files
+        run: |
+          echo "=== Blog directory ==="
+          find blog -type f -print
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
