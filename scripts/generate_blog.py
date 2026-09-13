@@ -252,7 +252,7 @@ def generate_index(posts):
 </html>
 """
 
-    (BLOG_DIR / "blogs.html").write_text(
+    (BLOG_DIR / "index.html").write_text(
         page,
         encoding="utf-8"
     )
