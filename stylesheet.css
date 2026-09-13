@@ -1,4 +1,5 @@
 :root {
+      --bg: #15191b;
       --text: #f5f4ee;
       --muted: #9da2a0;
       --blue: #269bd2;
@@ -28,7 +29,7 @@
       margin: 0 auto;
       position: relative;
 
-      background-color: rgba(0, 0, 0, 0.75);
+      background-color: rgba(0, 0, 0, 0.35);
 
       padding: 40px;
       box-sizing: border-box;
@@ -51,7 +52,7 @@
         background: linear-gradient(
             to right,
             transparent,
-            rgba(0, 0, 0, 0.75)
+            rgba(0, 0, 0, 0.35)
         );
     }
 
@@ -60,7 +61,7 @@
         background: linear-gradient(
             to left,
             transparent,
-            rgba(0, 0, 0, 0.75)
+            rgba(0, 0, 0, 0.35)
         );
     }
 
@@ -72,6 +73,7 @@
     }
 
     body {
+      background: var(--bg);
       color: var(--text);
       font-family: "Nunito", sans-serif;
       min-height: 100vh;
