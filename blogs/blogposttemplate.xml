@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<post>
+    <title>Designing Gunlands</title>
+
+    <slug>designing-gunlands</slug>
+
+    <date>2026-09-13</date>
+
+    <description>
+        Some thoughts on designing systems for Gunlands.
+    </description>
+
+    <content>
+
+        <paragraph>
+            Gunlands started as a small experiment in making a roguelike
+            shooter focused around building your own weapons.
+        </paragraph>
+
+        <heading>
+            Building the Gun System
+        </heading>
+
+        <paragraph>
+            One of the things I really wanted was for the player to feel
+            like they were actually designing their weapon.
+        </paragraph>
+
+        <paragraph>
+            This meant breaking the gun down into lots of smaller systems.
+        </paragraph>
+
+    </content>
+</post>

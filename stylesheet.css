@@ -339,3 +339,187 @@
         padding-bottom: 60px;
       }
     }
+
+
+    /* =========================
+   BLOG
+========================= */
+
+.blog-post {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 0 100px;
+}
+
+.blog-back {
+    display: inline-block;
+
+    color: var(--muted);
+    text-decoration: none;
+
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+
+    margin-bottom: 50px;
+
+    transition: transform .2s ease;
+}
+
+.blog-back:hover {
+    color: white;
+    transform: translateX(-4px);
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.blog-header h1 {
+    margin-bottom: 20px;
+}
+
+.blog-date {
+    color: var(--muted);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 11px;
+}
+
+.blog-content {
+    color: #c4c8c6;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+.blog-content p {
+    margin-bottom: 28px;
+}
+
+.blog-content h2 {
+    color: white;
+
+    font-size: 28px;
+
+    line-height: 1.2;
+
+    margin: 55px 0 20px;
+
+    font-weight: 900;
+}
+
+.blog-content h3 {
+    color: white;
+
+    font-size: 21px;
+
+    margin: 40px 0 15px;
+
+    font-weight: 900;
+}
+
+.blog-content blockquote {
+    border-left: 3px solid var(--blue);
+
+    padding-left: 20px;
+
+    margin: 35px 0;
+
+    color: var(--muted);
+
+    font-style: italic;
+}
+
+.blog-content figure {
+    margin: 40px 0;
+}
+
+.blog-content img {
+    display: block;
+
+    width: 100%;
+
+    border-radius: 8px;
+
+    border: 2px solid rgba(255,255,255,.2);
+}
+
+
+/* =========================
+   BLOG LIST
+========================= */
+
+.blog-list {
+    display: grid;
+
+    gap: 25px;
+}
+
+.blog-card {
+    display: block;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    padding: 25px;
+
+    border: 2px solid rgba(255,255,255,.2);
+
+    border-radius: 8px;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.blog-card:hover {
+    border-color: white;
+
+    transform:
+        translateY(-5px)
+        rotate(-.5deg);
+
+    box-shadow:
+        7px 8px 0 rgba(0,0,0,.25);
+}
+
+.blog-card-date {
+    color: var(--muted);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    margin-bottom: 10px;
+}
+
+.blog-card h3 {
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: 900;
+
+    margin-bottom: 8px;
+}
+
+.blog-card p {
+    color: var(--muted);
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+.blog-read {
+    color: var(--blue);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+}
