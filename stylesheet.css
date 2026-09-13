@@ -1,5 +1,4 @@
 :root {
-      --bg: #15191b;
       --text: #f5f4ee;
       --muted: #9da2a0;
       --blue: #269bd2;
@@ -9,6 +8,21 @@
       --card-radius: 12px;
     }
 
+
+#canvas {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    z-index: -1;
+    pointer-events: none;
+}
+
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -16,7 +30,6 @@
     }
 
     body {
-      background: var(--bg);
       color: var(--text);
       font-family: "Nunito", sans-serif;
       min-height: 100vh;
