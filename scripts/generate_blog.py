@@ -26,17 +26,17 @@ def generate_content(content):
 
     for element in content:
 
-        if element.tag == "paragraph":
+        if element.tag == "p":
             output.append(
                 f"<p>{html.escape(text(element))}</p>"
             )
 
-        elif element.tag == "heading":
+        elif element.tag == "h2":
             output.append(
                 f"<h2>{html.escape(text(element))}</h2>"
             )
 
-        elif element.tag == "subheading":
+        elif element.tag == "h3":
             output.append(
                 f"<h3>{html.escape(text(element))}</h3>"
             )

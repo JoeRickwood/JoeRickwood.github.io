@@ -31,5 +31,7 @@
         This helped keep my project clean and tidy and avoided unnecessary extra files. </p>
 
         <image src="images/listofshaders.png" alt="List Of Shaders"/>
+
+        <p>Above is the list of shaders my program contains, without this compact method </p>
     </content>
 </post>
