@@ -8,10 +8,28 @@
     <date>2026-09-16</date>
 
     <description>
-        Blog is working! wahooo!
+        I go in-depth in the features and other cool stuff Implemented into my engine!
     </description>
 
     <content>
         <image src="opengldemo.jpg" alt="My Project"/>
+
+        <h2>Core Features</h2>
+
+        <h3>Instanced Rendering</h3>
+
+        <h3>Shadow Mapping </h3>
+
+        <h3>Custom Material + Shader File Loading </h3>
+        <p>One thing I found annoying about the process was the implementation of new shaders, they would need a .vert component and a .frag component.
+        
+        To solve this, I solution i came up with was to combine them into a single .shader file which contained both a .vert and .frag component</p>
+
+        <image src="images/multipassshaders.png" alt="Multi Pass Shaders"/>
+
+        <p>In order to be able to to this, I append a define into the shader which the program then can check what define is currently being written in order to compile either the .vert or .frag component, 
+        This helped keep my project clean and tidy and avoided unnecessary extra files. </p>
+
+        <image src="images/listofshaders.png" alt="List Of Shaders"/>
     </content>
 </post>
