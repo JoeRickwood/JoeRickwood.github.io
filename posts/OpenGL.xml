@@ -21,16 +21,20 @@
 
         <h3>Shadow Mapping </h3>
         <image src="images/shadowrendering.png" alt="Shadows"/>
-        <p>Shadow rendering was an interesting challenge, to achieve this, I had to render depth from a directiional lights point of view 
+        <p>Shadow rendering was an interesting challenge, to achieve this, I had to render depth from a directional lights point of view 
         and then apply a transformation in-shader projected into the main cameras point of view. By doing this I can calculate which areas are in shadow 
         relative to the main camera and which are not.
         
         </p>
 
-        <p></p>
-
+        <p>Assuming we have the light space coords, we can calculate the screen coords to sample the shadow texture of</p>
+        <h4> FragPosLightSpace = LightVP * vec4(FragPos, 1.0); </h4>
         <h4><span style="color: green;">vec3</span> projCoords = fragPosLightSpace.xyz / fragPosLightSpace.w;</h4>
 
+        <p>We can now sample the shadow texture in order to get whats in shadow and whats not </p>
+        <h4><span style="color: blue;">texture</span>(ShadowMap, projCoords.xy)</h4>
+
+        <p>I go through an extra step in order to sample smooth shadows but this is nbo nesseccary for shadow-sampling </p>
 
         <h3>Deffered Rendering </h3>
         <image src="images/defferedrendering.png" alt="Deffered Rendering"/>
