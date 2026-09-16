@@ -180,7 +180,7 @@ def generate_index(posts):
                 </span>
 
             </a>
-            """
+            """ 
         )
 
     cards_html = "\n".join(cards)
@@ -225,7 +225,7 @@ def generate_index(posts):
         <div class="links">
 
             <a href="../index.html" class="link blue">
-                ← HOME
+                HOME
             </a>
 
         </div>

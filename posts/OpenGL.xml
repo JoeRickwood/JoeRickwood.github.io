@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<post>
+    <title>Test Blog Post</title>
+
+    <slug>TestBlog</slug>
+
+    <date>2026-09-13</date>
+
+    <description>
+        Blog is working! wahooo!
+    </description>
+
+    <image src="opengldemo.jpg" alt="My Project"/>
+
+    <content>
+
+    </content>
+</post>
