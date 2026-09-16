@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <post>
-    <title>Test Blog Post</title>
+    <title> A Look Into My Open GL Game Engine </title>
 
-    <slug>TestBlog</slug>
+    <slug>Open GL Game Engine</slug>
 
-    <date>2026-09-13</date>
+    <date>2026-09-16</date>
 
     <description>
         Blog is working! wahooo!
     </description>
 
-    <image src="opengldemo.jpg" alt="My Project"/>
-
     <content>
-
+        <image src="opengldemo.jpg" alt="My Project"/>
     </content>
 </post>
