@@ -16,11 +16,33 @@
 
         <h2>Core Features</h2>
 
-        <h3>Instanced Rendering</h3>
+        <h3>UI + Text Rendering</h3>
+        <image src="images/uiandtextrendering.png" alt="UI And Text"/>
 
         <h3>Shadow Mapping </h3>
+        <image src="images/shadowrendering.png" alt="Shadows"/>
+        <p>Shadow rendering was an interesting challenge, to achieve this, I had to render depth from a directiional lights point of view 
+        and then apply a transformation in-shader projected into the main cameras point of view. By doing this I can calculate which areas are in shadow 
+        relative to the main camera and which are not.
+        
+        </p>
+
+        <p></p>
+
+        <h4><span style="color: green;">vec3</span> projCoords = fragPosLightSpace.xyz / fragPosLightSpace.w;</h4>
+
+
+        <h3>Deffered Rendering </h3>
+        <image src="images/defferedrendering.png" alt="Deffered Rendering"/>
+
+        <p>I also integrated deffered rendering, this can allow me to add 100+ lights into the scene each affecting models individually,
+        this also allows me more in-depth control over the rendering pipeline and allows for custom effects to be passed in between texture passes</p>
+
+        <p>These objects being rendered are also being rendered instanced so its a few draw calls instead of thousends, doing this improve performance of the application thoroughly</p>
 
         <h3>Custom Material + Shader File Loading </h3>
+        <image src="images/customshaderfile.png" alt="Custom Shaders"/>
+
         <p>One thing I found annoying about the process was the implementation of new shaders, they would need a .vert component and a .frag component.
         
         To solve this, I solution i came up with was to combine them into a single .shader file which contained both a .vert and .frag component</p>

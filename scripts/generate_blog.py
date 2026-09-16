@@ -41,6 +41,11 @@ def generate_content(content):
                 f"<h3>{html.escape(text(element))}</h3>"
             )
 
+        elif element.tag == "h4":
+            output.append(
+                f"<h4>{html.escape(text(element))}</h4>"
+            )
+
         elif element.tag == "quote":
             output.append(
                 f"<blockquote>{html.escape(text(element))}</blockquote>"
