@@ -18,6 +18,24 @@ def text(element):
     return "".join(element.itertext()).strip()
 
 
+def inline_text(element):
+    output = []
+
+    if element.text:
+        output.append(html.escape(element.text))
+
+    for child in element:
+        if child.tag == "br":
+            output.append("<br>")
+        else:
+            output.append(html.escape(text(child)))
+
+        if child.tail:
+            output.append(html.escape(child.tail))
+
+    return "".join(output)
+
+
 def generate_content(content):
     output = []
 
@@ -28,7 +46,7 @@ def generate_content(content):
 
         if element.tag == "p":
             output.append(
-                f"<p>{html.escape(text(element))}</p>"
+                f"<p>{inline_text(element)}</p>"
             )
 
         elif element.tag == "h2":
