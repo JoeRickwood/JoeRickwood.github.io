@@ -12,7 +12,7 @@
     </description>
 
     <content>
-        <image src="lava.png" alt="My Project"/>
+        <image src="images/lava.png" alt="My Project"/>
 
         <p>This shader was created inside the Unity Shader graph, utilizing both baked and realtime lighting to achieve the effects shown</p>
 
