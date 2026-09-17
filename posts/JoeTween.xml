@@ -1,72 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <post>
-    <title> A Look Into My Open GL Game Engine </title>
+    <title> JOETween - Procedural Node-Based Animation For Unity </title>
 
-    <slug>Open GL Game Engine</slug>
+    <slug>JOETween</slug>
 
-    <date>2026-09-16</date>
+    <date>2026-06-20</date>
 
     <description>
         I go in-depth in the features and other cool stuff Implemented into my engine!
     </description>
 
     <content>
-        <image src="opengldemo.jpg" alt="My Project"/>
+        <image src="joetweengraph.png" alt="My Project"/>
 
-        <h2>Core Features</h2>
+        <h2>JOETween Can Be Found At https://github.com/JoeRickwood/JoeTween </h2>
 
-        <h3>UI + Text Rendering</h3>
-        <image src="images/uiandtextrendering.png" alt="UI And Text"/>
-
-        <p>Something I spent alot of time working on was creating usable UI in my program
+        <p>
+        JOETween was a project where I created a fully procedural node-based animation tool to be used inside of unity to create simple repeating or static animations to be applied to user-interface elements or in-world objects.
         
-        With my implementations, I integrated text rendering and nine-sliced UI rendering, both of which allow me to crate interesting user-interfaces</p>
+        I created this tool because I felt animating through code felt tedius and annoying when I needed to change a small aspect of an animation, thus the need for a new tool to allow for sequenced actions.
+        </p>
 
-        <h3>Shadow Mapping </h3>
-        <image src="images/shadowrendering.png" alt="Shadows"/>
-        <p>Shadow rendering was an interesting challenge, to achieve this, I had to render depth from a directional lights point of view 
-        and then apply a transformation in-shader projected into the main cameras point of view. By doing this I can calculate which areas are in shadow 
-        relative to the main camera and which are not.
+        <h2>HOW IT WORKS </h2>
+
+        <p>
+        Behind the scenes, JOETween stores all actions as TweenActions, which is a base class allowing for a typed value to change over time based on an input curve and a time value,
+
+        inherited class can allow for altering of different components within the UnityEngine such as Sprites, Transforms, Text, and Lights.
+
+        because the system is abstracted quite alot, it allows for nearly limitless potential of additions and different things to allow tweening of.
+        
+        
         
         </p>
 
-        <p>Assuming we have the light space coords, we can calculate the screen coords to sample the shadow texture of</p>
-        <h4> FragPosLightSpace = LightVP * vec4(FragPos, 1.0); </h4>
-        <h4><span style="color: green;">vec3</span> projCoords = fragPosLightSpace.xyz / fragPosLightSpace.w;
+        <h2>HOW TO USE AND SIMPLE IMPLEMENTATION </h2>
+        <h3>Beginning Notes</h3>
+        <p>
+        - Currently, tweens run on Update pacing, meaning they will update along with all other objects.
         
-        </h4>
-
-        <p>We can now sample the shadow texture in order to get whats in shadow and whats not 
+        - Tweens can be overridden by applying values to tweened objects in the LateUpdate step; this is similar to overriding animations from the AnimatorController  
+        
+        - Currently, there is limited support for math and the creation and modification of vectors from function nodes
+        
+        - There are several ways to implement the JoeTween library into your project, as well as multiple ways of also linking the system up to actions, button pressed ect, etc. This is for the benefit of ease of use and the versatility it offers. 
+        
+        - I would recommend looking through some example graphs within the JoeTween->Examples folder 
         </p>
-        <h4><span style="color: blue;">texture</span>(ShadowMap, projCoords.xy)</h4>
 
-        <p>I go through an extra step in order to sample smooth shadows but this is not nesseccary for shadow-sampling and simply improves the result</p>
-
-        <image src="images/smoothshadowsampling.png" alt="Smooth Shadows"/>
-
-        <h3>Deffered Rendering </h3>
-        <image src="images/defferedrendering.png" alt="Deffered Rendering"/>
-
-        <p>I also integrated deffered rendering, this can allow me to add 100+ lights into the scene each affecting models individually,
-        this also allows me more in-depth control over the rendering pipeline and allows for custom effects to be passed in between texture passes</p>
-
-        <p>These objects being rendered are also being rendered instanced so its a few draw calls instead of thousends, doing this improve performance of the application thoroughly</p>
-
-        <h3>Custom Material + Shader File Loading </h3>
-        <image src="images/customshaderfile.png" alt="Custom Shaders"/>
-
-        <p>One thing I found annoying about the process was the implementation of new shaders, they would need a .vert component and a .frag component.
+        <h3>Creating A Procedural Graph</h3>
+        <p>
+        To create your first sequence graph, right-click in the assets panel and navigate to Create->JoeTween->TweenSequenceGraph, give it a name, and you should see that you have created your very own tween sequence graph.
         
-        To solve this, I solution i came up with was to combine them into a single .shader file which contained both a .vert and .frag component</p>
+        It should look something like the image shown below, You can double-click it to open it up in  the graph editor, inspector window, and Begin editing your first graph. 
+        </p>
 
-        <image src="images/multipassshaders.png" alt="Multi Pass Shaders"/>
+        <image src="tweengraph.png" alt="TweenGraph"/>
 
-        <p>In order to be able to to this, I append a define into the shader which the program then can check what define is currently being written in order to compile either the .vert or .frag component, 
-        This helped keep my project clean and tidy and avoided unnecessary extra files. </p>
+        <p>
+        You will see that you will get an error, notifying you that “Add a StartNode in your Tween Sequence graph”, this is because there is currently no entrance point to the graph. Go ahead and create a start node and place it into your graph editor like so. 
+        </p>
 
-        <image src="images/listofshaders.png" alt="List Of Shaders"/>
+        <image src="startoftweengraph.png" alt="TweenGraph"/>
 
-        <p>Above is the list of shaders my program contains, without this compact method </p>
+        <p>
+        Now that we have a valid graph to start playing with, we can create some action nodes to create some cool behaviour. The example we will build today is a simple rotation wiggle on activating this tween. To do this, we can utilize the RotateSinActionNode. When created, you will see a list of variables to alter on this object, such as length, axis, frequency, and amplitude. These variables control how the action will play in the context of a transform object. Here is some useful information about each variable on this node:
+        
+        TWEEN CURVE: controls the easing curve of the action playing 
+        TWEEN LENGTH: the length in seconds that this action will play before continuing with the sequence 
+        ROTATION AXIS: the axis to apply the rotation in, generally x is the left/right pointing axis, y is up/down, z is forward/backward 
+        FREQUENCY: The frequency of the sine wave
+        AMPLITUDE: The amplitude in degrees of the rotation back and forth
+        SPACE: The object space to apply the action in, either world or local 
+        </p>
+
+        <image src="startofgraph.png" alt="TweenGraph"/>
+
+        <p>
+        To link this up to work in the easiest way possible, let's create a button in our canvas inside of Unity and create an onClick event on that button
+        </p>
+
+        <image src="buttonincanvas.png" alt="TweenGraph"/>
+
+        <p>
+        Inside the on-click event, we can assign the target object to be the TweenSequenceGraph asset just created and edited. 
+
+        We can then assign it the function call of TweenRuntimeGraph.Play and pass in our GameObject, we want to apply the tween to.
+
+        You should now see how, when you press the button, the tween should play on the target object. However, an oversight in our logic is how the button does not return to the correct rotation; this is because of how sine waves work. To fix this, we can simply rotate back to our original rotation of 0, 0, 0. 
+ 
+        </p>
+
+        <image src="basicgraphdone.png" alt="TweenGraph"/>
+
+        <p>
+        This is the setup for doing so. Notice how the ObjectStartRotationFunctionNode is played in the start rotation? That's because it caches the startRotation from the start of the action, not the entire tween graph. 
+        This will be updated in the future to include the option to change the step at which it saves. 
+        
+        Congratulations! You have just made your first graph + application using JoeTween.
+        </p>
+
+        <h2>Closing Notes </h2>
+        <p>
+        - This document outlines the use of Joetween in the context of a button press; however, there are several ways to implement the tween calls utilizing the OnMouseOverTween and OnMousePressTween monobehaviour scripts. 
+        
+        - Tweens can also be created easily, although with slightly more process in a custom monobehaviour class and called directly to the tween manager by calling TweenManager.StartTween with the custom-created TweenAction class
+        </p>
+       
     </content>
 </post>
