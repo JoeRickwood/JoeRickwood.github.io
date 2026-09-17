@@ -31,8 +31,6 @@
 
         because the system is abstracted quite alot, it allows for nearly limitless potential of additions and different things to allow tweening of.
         
-        
-        
         </p>
 
         <h2>HOW TO USE AND SIMPLE IMPLEMENTATION </h2>
@@ -40,11 +38,11 @@
         <p>
         - Currently, tweens run on Update pacing, meaning they will update along with all other objects. <br/>
         
-        - Tweens can be overridden by applying values to tweened objects in the LateUpdate step; this is similar to overriding animations from the AnimatorController <br>
+        - Tweens can be overridden by applying values to tweened objects in the LateUpdate step; this is similar to overriding animations from the AnimatorController <br/>
         
         - Currently, there is limited support for math and the creation and modification of vectors from function nodes <br/>
         
-        - There are several ways to implement the JoeTween library into your project, as well as multiple ways of also linking the system up to actions, button pressed ect, etc. This is for the benefit of ease of use and the versatility it offers. <br>
+        - There are several ways to implement the JoeTween library into your project, as well as multiple ways of also linking the system up to actions, button pressed ect, etc. This is for the benefit of ease of use and the versatility it offers. <br/>
         
         - I would recommend looking through some example graphs within the JoeTween->Examples folder
         </p>
@@ -69,7 +67,7 @@
         
         TWEEN CURVE: controls the easing curve of the action playing <br/>
         TWEEN LENGTH: the length in seconds that this action will play before continuing with the sequence <br/>
-        ROTATION AXIS: the axis to apply the rotation in, generally x is the left/right pointing axis, y is up/down, z is forward/backward <br>
+        ROTATION AXIS: the axis to apply the rotation in, generally x is the left/right pointing axis, y is up/down, z is forward/backward <br/>
         FREQUENCY: The frequency of the sine wave <br/>
         AMPLITUDE: The amplitude in degrees of the rotation back and forth <br/>
         SPACE: The object space to apply the action in, either world or local 
@@ -103,9 +101,9 @@
 
         <h2>Closing Notes </h2>
         <p>
-        - This document outlines the use of Joetween in the context of a button press; however, there are several ways to implement the tween calls utilizing the OnMouseOverTween and OnMousePressTween monobehaviour scripts.  <br>
+        - This document outlines the use of Joetween in the context of a button press; however, there are several ways to implement the tween calls utilizing the OnMouseOverTween and OnMousePressTween monobehaviour scripts.  <br/>
         
-        - Tweens can also be created easily, although with slightly more process in a custom monobehaviour class and called directly to the tween manager by calling TweenManager.StartTween with the custom-created TweenAction class <br>
+        - Tweens can also be created easily, although with slightly more process in a custom monobehaviour class and called directly to the tween manager by calling TweenManager.StartTween with the custom-created TweenAction class <br/>
         </p>
        
     </content>
