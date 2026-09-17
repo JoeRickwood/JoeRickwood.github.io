@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<post>
+    <title> Lava Shader Study </title>
+
+    <slug>LavaShaderStudy</slug>
+
+    <date>2025-10-11</date>
+
+    <description>
+        
+    </description>
+
+    <content>
+        <image src="lava.png" alt="My Project"/>
+
+        <p>This shader was created inside the Unity Shader graph, utilizing both baked and realtime lighting to achieve the effects shown<p>
+
+        <image src="lavashadergraph.png" alt="Graph"/>
+
+        <h2>Layered Maps</h2>
+
+        <image src="differentmaps.png" alt="Different Maps"/>
+
+        <p>
+        The second portion of the lava shader combined several “Flow” maps into a shader that looks visually stunning, 
+        utilising scrolling ripple maps to simulate a hotter, runnier lava flowing over the top of more stagnant lava below, 
+        giving a really cool flow effect. 
+
+        The darker areas in brighter light can be more easily viewed, anyway they are cobbled rock akin to basalt or other lava rocks commonly 
+        found in this environment, using this texture as a base im able to blend it nicely with the lava, almost feeling as if they are slowly melting in the pool of molten 
+        rock. Emission Maps can be passed in to separate the portions of rocks, below shown are some  examples of different emission maps used to give different effects, this may be used by users to 
+        create a variety of effects for various types of lava. 
+        </p>
+
+        <h2>Heat Distortion</h2>
+
+        <image src="heatdistortion.png" alt="Different Maps"/>
+
+        <p>
+        Another part of the shader effect was heat distortion above the lava field, this is done using a 
+        fullscreen shader pass and projecting screen coordinates into world space.  It then uses these 
+        coordinates to calculate how much distortion the required screen pixels require, mimicking the 
+        effect in real life how when we look at hot objects the air above becomes distorted, which is 
+        caused by a turbulent mix of air of different temperatures with different refractive indexes and 
+        strengths. 
+        The calibration of this can be changed depending on how intense of a heat change the lava has, 
+        if its lava in a very cold environment it might have a higher/stronger heat distortion due to these 
+        factors. This effect is rendered AFTER everything else so it is applied on top of each other 
+        effect. The Y coordinate in which the heat effect starts at is also always above the lava to 
+        prevent the lava from distorting itself. 
+
+        </p>
+
+        <h2>Lava Bubbles</h2>
+
+        <image src="lavabubbles.png" alt="Bubbles"/>
+
+        <p>
+        Lava bubbles are found popping and bubbling on the surface of the lava, utilising the VFX graph. 
+        I created bubbles to grow in size until they were big enough to pop, releasing a burst of 
+        several smaller lava particles, which then sink into the lava when dropping. 
+        This effect can be toggled on and off by disabling the VFX object, someone may want to disable 
+        this to have a more realistic lava, which rarely has lava bubbles compared to lava in digital 
+        media which is often shown as bubbly and popping. 
+        </p>
+    </content>
+</post>
