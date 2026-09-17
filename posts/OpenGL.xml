@@ -12,7 +12,7 @@
     </description>
 
     <content>
-        <image src="opengldemo.jpg" alt="My Project"/>
+        <image src="images/opengldemo.jpg" alt="My Project"/>
 
         <h2>Core Features</h2>
 
