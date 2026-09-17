@@ -16,11 +16,11 @@
 
         <p>This shader was created inside the Unity Shader graph, utilizing both baked and realtime lighting to achieve the effects shown</p>
 
-        <image src="lavashadergraph.png" alt="Graph"/>
+        <image src="images/lavashadergraph.png" alt="Graph"/>
 
         <h2>Layered Maps</h2>
 
-        <image src="differentmaps.png" alt="Different Maps"/>
+        <image src="images/differentmaps.png" alt="Different Maps"/>
 
         <p>
         The second portion of the lava shader combined several “Flow” maps into a shader that looks visually stunning, 
@@ -35,7 +35,7 @@
 
         <h2>Heat Distortion</h2>
 
-        <image src="heatdistortion.png" alt="Different Maps"/>
+        <image src="images/heatdistortion.png" alt="Different Maps"/>
 
         <p>
         Another part of the shader effect was heat distortion above the lava field, this is done using a 
@@ -54,7 +54,7 @@
 
         <h2>Lava Bubbles</h2>
 
-        <image src="lavabubbles.png" alt="Bubbles"/>
+        <image src="images/lavabubbles.png" alt="Bubbles"/>
 
         <p>
         Lava bubbles are found popping and bubbling on the surface of the lava, utilising the VFX graph. 

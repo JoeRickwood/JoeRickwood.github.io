@@ -12,7 +12,7 @@
     </description>
 
     <content>
-        <image src="joetweengraph.png" alt="My Project"/>
+        <image src="images/joetweengraph.png" alt="My Project"/>
 
         <h2>JOETween Can Be Found At https://github.com/JoeRickwood/JoeTween </h2>
 
@@ -56,13 +56,13 @@
         It should look something like the image shown below, You can double-click it to open it up in  the graph editor, inspector window, and Begin editing your first graph. 
         </p>
 
-        <image src="tweengraph.png" alt="TweenGraph"/>
+        <image src="images/tweengraph.png" alt="TweenGraph"/>
 
         <p>
         You will see that you will get an error, notifying you that “Add a StartNode in your Tween Sequence graph”, this is because there is currently no entrance point to the graph. Go ahead and create a start node and place it into your graph editor like so. 
         </p>
 
-        <image src="startoftweengraph.png" alt="TweenGraph"/>
+        <image src="images/startoftweengraph.png" alt="TweenGraph"/>
 
         <p>
         Now that we have a valid graph to start playing with, we can create some action nodes to create some cool behaviour. The example we will build today is a simple rotation wiggle on activating this tween. To do this, we can utilize the RotateSinActionNode. When created, you will see a list of variables to alter on this object, such as length, axis, frequency, and amplitude. These variables control how the action will play in the context of a transform object. Here is some useful information about each variable on this node:
@@ -75,13 +75,13 @@
         SPACE: The object space to apply the action in, either world or local 
         </p>
 
-        <image src="startofgraph.png" alt="TweenGraph"/>
+        <image src="images/startofgraph.png" alt="TweenGraph"/>
 
         <p>
         To link this up to work in the easiest way possible, let's create a button in our canvas inside of Unity and create an onClick event on that button
         </p>
 
-        <image src="buttonincanvas.png" alt="TweenGraph"/>
+        <image src="images/buttonincanvas.png" alt="TweenGraph"/>
 
         <p>
         Inside the on-click event, we can assign the target object to be the TweenSequenceGraph asset just created and edited. 
@@ -92,7 +92,7 @@
  
         </p>
 
-        <image src="basicgraphdone.png" alt="TweenGraph"/>
+        <image src="images/basicgraphdone.png" alt="TweenGraph"/>
 
         <p>
         This is the setup for doing so. Notice how the ObjectStartRotationFunctionNode is played in the start rotation? That's because it caches the startRotation from the start of the action, not the entire tween graph. 
