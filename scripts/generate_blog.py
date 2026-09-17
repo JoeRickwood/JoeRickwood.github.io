@@ -106,8 +106,12 @@ def generate_post(xml_file):
 
     <article class="blog-post">
 
+        <a href="../blog/index.html" class="blog-back">
+            ← BACK TO BlOG
+        </a>
+
         <a href="../index.html" class="blog-back">
-            ← BACK
+            ← BACK TO PORTFOLIO
         </a>
 
         <header class="blog-header">
